@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Checkout kernel source
       run: |
-        git clone --depth=1 <kernel repo> -b <kernel branch> ${{ github.workspace }}
+        git clone --depth=1 https://github.com/team-sunfish/kernel_xiaomi_mt6768 -b lineage-22.1 ${{ github.workspace }}
   
     - name: Checkout clang compiler
       run: |
