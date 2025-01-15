@@ -36,6 +36,7 @@ jobs:
       run: | 
         cd ${{ github.workspace }}
         sudo apt-get install gcc-aarch64-linux-gnu
+        sudo apt-get install binutils-arm-linux-gnueabi gcc-arm-linux-gnueabi
         export PATH="$PWD/toolchains/proton-clang/bin:$PATH"
         export ARCH=arm64
         export SUBARCH=arm64
