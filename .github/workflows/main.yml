@@ -68,7 +68,7 @@ jobs:
         sed -i "s/kernel.string=ExampleKernel by osm0sis @ xda-developers/kernel.string=Horrible Kernel by Keru2da/g" AnyKernel3/anykernel.sh
         cp out/arch/arm64/boot/Image.gz-dtb AnyKernel3/
         cd AnyKernel3
-        zip [AOSP-A13+]horrible-kernel(beta)--$(date "+%Y-%m-%d--%H-%M-%S").zip * -r
+        zip [AOSP-A13+]horrible-kernel-beta_11-45PM_15.01.2025.zip * -r
         
     - name: Release build
       uses: appleboy/telegram-action@master
