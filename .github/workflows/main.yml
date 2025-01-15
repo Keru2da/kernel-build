@@ -23,6 +23,7 @@ jobs:
   
     - name: KernelSU Patch
       run: |
+        cd ${{ github.workspace }}
         curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/refs/heads/next-susfs-5.4/kernel/setup.sh" | bash
 
     - name: Checkout zipper
