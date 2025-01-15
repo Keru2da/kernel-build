@@ -52,7 +52,7 @@ jobs:
         export STRIP=llvm-strip
         export KBUILD_COMPILER_STRING="$(clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
         export KBUILD_BUILD_HOST=Animez.my.id
-        export KBUILD_BUILD_USER=mitsuaa😘
+        export KBUILD_BUILD_USER=Keru2da
         export AS=aarch64-linux-gnu-as
         make -j$(nproc --all) O=out ARCH=arm64 CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip merlin_defconfig
         make -j$(nproc --all) O=out ARCH=arm64 savedefconfig CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
@@ -65,7 +65,7 @@ jobs:
         sed -i 's/do.devicecheck=1/do.devicecheck=0/g' AnyKernel3/anykernel.sh
         sed -i 's!BLOCK=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;!BLOCK=auto;!g' AnyKernel3/anykernel.sh
         sed -i 's/IS_SLOT_DEVICE=0;/IS_SLOT_DEVICE=auto;/g' AnyKernel3/anykernel.sh
-        sed -i "s/kernel.string=ExampleKernel by osm0sis @ xda-developers/kernel.string=KucingPoi Kernel by mitsuaa/g" AnyKernel3/anykernel.sh
+        sed -i "s/kernel.string=ExampleKernel by osm0sis @ xda-developers/kernel.string=Keru's Kernel by Keru2da/g" AnyKernel3/anykernel.sh
         cp out/arch/arm64/boot/Image.gz-dtb AnyKernel3/
         cp out/arch/arm64/boot/dtbo.img AnyKernel3/
         cp out/arch/arm64/boot/dts/mediatek/mt6768.dtb AnyKernel3/dtb
