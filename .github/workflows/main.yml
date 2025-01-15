@@ -65,12 +65,12 @@ jobs:
         sed -i 's/do.devicecheck=1/do.devicecheck=0/g' AnyKernel3/anykernel.sh
         sed -i 's!BLOCK=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;!BLOCK=auto;!g' AnyKernel3/anykernel.sh
         sed -i 's/IS_SLOT_DEVICE=0;/IS_SLOT_DEVICE=auto;/g' AnyKernel3/anykernel.sh
-        sed -i "s/kernel.string=ExampleKernel by osm0sis @ xda-developers/kernel.string=Keru's Kernel by Keru2da/g" AnyKernel3/anykernel.sh
+        sed -i "s/kernel.string=ExampleKernel by osm0sis @ xda-developers/kernel.string=Horrible Kernel by Keru2da/g" AnyKernel3/anykernel.sh
         cp out/arch/arm64/boot/Image.gz-dtb AnyKernel3/
         cp out/arch/arm64/boot/dtbo.img AnyKernel3/
         cp out/arch/arm64/boot/dts/mediatek/mt6768.dtb AnyKernel3/dtb
         cd AnyKernel3
-        zip [AOSP-A13+]Keru2da-Kernel_100%stolen-kernel(beta)--$(date "+%Y-%m-%d--%H-%M-%S").zip * -r
+        zip [AOSP-A13+]horrible-kernel(beta)--$(date "+%Y-%m-%d--%H-%M-%S").zip * -r
         
     - name: Release build
       uses: appleboy/telegram-action@master
