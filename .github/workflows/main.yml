@@ -24,7 +24,7 @@ jobs:
     - name: KernelSU Patch
       run: |
         cd ${{ github.workspace }}
-        curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/refs/heads/next-susfs-5.4/kernel/setup.sh" | bash
+        curl -LSs "https://raw.githubusercontent.com/MrShockWAVEE/kernel_xiaomi_mt6768/Ironhide/KernelSU-Next/kernel/setup.sh" | bash -
 
     - name: Checkout zipper
       uses: actions/checkout@v4
