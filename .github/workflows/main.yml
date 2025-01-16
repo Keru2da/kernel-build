@@ -73,7 +73,7 @@ jobs:
     - name: Release build
       uses: appleboy/telegram-action@master
       with:
-        to: 2347296860
-        token: 7840576893:AAGlTvKZ2_ZpAgIL_P0I7xyueO-_aK0xdYQ
+        to: ${{ secrets.CHANNEL_ID }}
+        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         message: Kernel Built with latest ZyCromerZ-clang with KernelSU!.
         document: ${{ github.workspace }}/AnyKernel3/*.zip
